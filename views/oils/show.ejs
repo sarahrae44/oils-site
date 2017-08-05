@@ -20,13 +20,24 @@
       </nav>
     </header>
     <main>
-      <p>Here is some text about this oils properties<p>
-        <%=oil.bodySystemName1%>
-        <%=oil.bodySystemText1%>
-        <%=oil.bodySystemName2%>
-        <%=oil.bodySystemText2%>
-        <%=oil.bodySystemName3%>
-        <%=oil.bodySystemText3%>
-
+      <p>Here is some text about <%=oil.name%>'s properties<p>
+      <table>
+        <tr>
+          <td><%=oil.bodySystemName1%></td>
+          <td><%=oil.bodySystemText1%></td>
+        </tr>
+        <tr>
+          <td><%=oil.bodySystemName2%></td>
+          <td><%=oil.bodySystemText2%><br/>
+        <tr>
+          <td><%=oil.bodySystemName3%></td>
+          <td><%=oil.bodySystemText3%></td>
+        </tr>
+      </table>
+    </main>
+    <footer>
+      <form action="/oils/<%=oil.id%>?_method=DELETE" method="POST">
+        <input type="submit" value="Delete Oil"/>
+      </form>
   </body>
 </html>

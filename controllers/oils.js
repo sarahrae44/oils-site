@@ -29,4 +29,10 @@ router.get('/:id', (req, res) => {
   });
 });
 
+router.delete('/:id', (req, res) => {
+  Oil.findByIdAndRemove(req.params.id, (err, foundOil) => {
+    res.redirect('/oils');
+  });
+});
+
 module.exports = router;
