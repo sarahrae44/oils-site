@@ -10,6 +10,9 @@ app.use(methodOverride('_method'));
 const oilsController = require('./controllers/oils.js');
 app.use('/oils', oilsController);
 
+const bodiesController = require('./controllers/bodies.js');
+app.use('/bodies', bodiesController);
+
 // index page
 app.get('/', (req, res) => {
   // res.send('index page working!')
