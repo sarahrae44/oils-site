@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <header>
+      <h1>Edit <%=oil.name%></h1>
+      <nav>
+          <%# for bs... %>
+        <table>
+          <tr>
+            <td>
+              <button><a href="/">Home</a></button>
+              <button><a href="/body">Body</a></button>
+            </td>
+          </tr>
+        </table>
+      </nav>
+    </header>
+    <main>
+      <form action="/oils/<%=oil.id%>?_method=PUT" method="post">
+        Name: <input type="text" name="name" value="<%=oil.name%>" /><br/>
+        Background Image: <input type="text" name="bgImg" value="<%=oil.bgImg%>"/><br/>
+        Icon Image: <input type="text" name="iconImg" value="<%=oil.iconImg%>"/><br/>
+        Organ/System Name: <input type="text" name="bodySystemName1" value="<%=oil.bodySystemName1%>"/><br/>
+        Organ/System Description: <input type="text" name="bodySystemText1" value="<%=oil.bodySystemText1%>"/><br/>
+        <br/>
+        Extra Systems (Optional):<br/>
+        Organ/System Name: <input type="text" name="bodySystemName2" value="<%=oil.bodySystemName2%>" /><br/>
+        Organ/System Description: <input type="text" name="bodySystemText2" value="<%=oil.bodySystemText2%>" /><br/>
+        Organ/System Name: <input type="text" name="bodySystemName3" value="<%=oil.bodySystemName3%>" /><br/>
+        Organ/System Description: <input type="text" name="bodySystemText3" value="<%=oil.bodySystemText3%>" /><br/>
+        Organ/System Name: <input type="text" name="bodySystemName4" value="<%=oil.bodySysteTextName4%>" /><br/>
+        Organ/System Description: <input type="text" name="bodySystemText4" value="<%=oil.bodySystemText4%>" /><br/>
+        <input type="submit" value="Update <%=oil.name%>"/>
+      </form>
+    </main>
+  </body>
+</html>

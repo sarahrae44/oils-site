@@ -35,4 +35,18 @@ router.delete('/:id', (req, res) => {
   });
 });
 
+router.get('/:id/edit', (req, res) => {
+  Oil.findById(req.params.id, (err, foundOil) => {
+    res.render('oils/edit.ejs', {
+      oil: foundOil
+    });
+  });
+});
+
+router.put('/:id', (req, res) => {
+  Oil.findByIdAndUpdate(req.params.id, req.body, () => {
+    res.redirect('/oils');
+  });
+});
+
 module.exports = router;
