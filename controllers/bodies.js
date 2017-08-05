@@ -29,6 +29,12 @@ router.get('/:id', (req, res) => {
   });
 });
 
+router.delete('/:id', (req, res) => {
+  Body.findByIdAndRemove(req.params.id, (err, foundBody) => {
+    res.redirect('/bodies');
+  });
+});
+
 router.put(':/id', (req, res) => {
   res.redirect('/bodies');
 });
