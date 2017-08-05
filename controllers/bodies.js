@@ -4,7 +4,25 @@ const Body = require('../models/bodies.js');
 const router = express.Router();
 
 router.get('/', (req, res) => {
-  res.render('bodies/index.ejs');
+  Body.find({}, (err, foundBodies) => {
+    res.render('bodies/index.ejs', {
+      bodies: foundBodies
+    });
+  })
+});
+
+router.post('/', (req, res) => {
+  Body.create(req.body, (err, createdBody) => {
+    res.redirect('/bodies');
+  });
+});
+
+router.get('/new', (req, res) => {
+  res.render('bodies/new.ejs');
+});
+
+router.put(':/id', (req, res) => {
+  res.redirect('/bodies');
 });
 
 module.exports = router;

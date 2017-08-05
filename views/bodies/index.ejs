@@ -21,7 +21,11 @@
       </nav>
     </header>
     <main>
-
+      <% for(let i = 0; i < bodies.length; i++){ %>
+        // <div class="oilListing">
+        <a href="/bodies/<%=bodies[i]._id%>"><img src="<%=bodies[i].iconImg%>"></a> <a href="/bodies/<%=bodies[i]._id%>"><%=bodies[i].name%></a><br/>
+        // </div>
+      <% } %>
     </main>
   </body>
 </html>

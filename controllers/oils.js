@@ -3,7 +3,7 @@ const Oil = require('../models/oils.js');
 // const Body = require('../models/bodies.js');
 const router = express.Router();
 
-router.get('/', (req, res) =>{
+router.get('/', (req, res) => {
   Oil.find({}, (err, foundOils) => {
     res.render('oils/index.ejs', {
       oils: foundOils

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <header>
+      <h1>Add an organ/system</h1>
+      <nav>
+          <%# for bs... %>
+        <table>
+          <tr>
+            <td>
+              <button><a href="/">Home</a></button>
+              <button><a href="/oils">Oils</a></button>
+              <button><a href="/bodies">Organ/Systems Index</a></button>
+            </td>
+          </tr>
+        </table>
+      </nav>
+    </header>
+    <main>
+      <form action="/bodies" method="post">
+        Name: <input type="text" name="name" /><br/>
+        Background Image: <input type="text" name="bgImg" /><br/>
+				Icon Image: <input type="text" name="iconImg" /><br/>
+        Oil: <input type="text" name="oilEffectName1" /><br/>
+        Oil Effect Description: <input type="text" name="oilEffectText1" /><br/>
+        <br/>
+        Extra Oils (Optional):<br/>
+        Oil: <input type="text" name="oilEffectName2" /><br/>
+        Oil Effect Description: <input type="text" name="oilEffectText2" /><br/>
+        Oil: <input type="text" name="oilEffectName3" /><br/>
+        Oil Effect Description: <input type="text" name="oilEffectText3" /><br/>
+        Oil: <input type="text" name="oilEffectName4" /><br/>
+        Oil Effect Description: <input type="text" name="oilEffectText4" /><br/>
+				<input type="submit" value="Add Organ/System" class="addButton"/>
+      </div>
+      </form>
+    </main>
+  </body>
+</html>
