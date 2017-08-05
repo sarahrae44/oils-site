@@ -22,9 +22,7 @@
     </header>
     <main>
       <% for(let i = 0; i < oils.length; i++){ %>
-    			// <div class="oilListing">
           <a href="/oils/<%=oils[i]._id%>"><img src="<%=oils[i].iconImg%>"></a> <a href="/oils/<%=oils[i]._id%>"><%=oils[i].name%></a><br/>
-    			// </div>
     		<% } %>
     </main>
   </body>

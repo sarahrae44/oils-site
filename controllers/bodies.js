@@ -35,8 +35,18 @@ router.delete('/:id', (req, res) => {
   });
 });
 
-router.put(':/id', (req, res) => {
-  res.redirect('/bodies');
+router.get('/:id/edit', (req, res) => {
+  Body.findById(req.params.id, (err, foundBody) => {
+    res.render('bodies/edit.ejs', {
+      body: foundBody
+    });
+  });
+});
+
+router.put('/:id', (req, res) => {
+  Body.findByIdAndUpdate(req.params.id, req.body, () => {
+    res.redirect('/bodies');
+  });
 });
 
 module.exports = router;
