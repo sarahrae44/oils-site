@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 
 const oilSchema = mongoose.Schema({
   name: { type: String, required: true },
+  desc: { type: String, required: true },
   bgImg: { type: String, required: true },
   iconImg: { type: String, required: true },
   bodySystemName1: { type: String, required: true },

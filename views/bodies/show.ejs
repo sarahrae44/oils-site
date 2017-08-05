@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <header>
+      <h1><%=body.name%></h1>
+      <nav>
+          <%# for bs... %>
+        <table>
+          <tr>
+            <td>
+              <button><a href="/">Home</a></button>
+              <button><a href="/oils">Oils</a></button>
+            </td>
+          </tr>
+        </table>
+      </nav>
+    </header>
+    <main>
+      <p><%=body.desc%><p>
+      <table>
+        <tr>
+          <td><%=body.oilEffectName1%></td>
+          <td><%=body.oilEffectText1%></td>
+        </tr>
+        <tr>
+          <td><%=body.oilEffectName2%></td>
+          <td><%=body.oilEffectText2%><br/>
+        <tr>
+          <td><%=body.oilEffectName3%></td>
+          <td><%=body.oilEffectText3%></td>
+        </tr>
+      </table>
+    </main>
+  </body>
+</html>

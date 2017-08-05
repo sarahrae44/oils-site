@@ -21,6 +21,14 @@ router.get('/new', (req, res) => {
   res.render('bodies/new.ejs');
 });
 
+router.get('/:id', (req, res) => {
+  Body.findById(req.params.id, (err, foundBody) => {
+    res.render('bodies/show.ejs', {
+      body: foundBody
+    });
+  });
+});
+
 router.put(':/id', (req, res) => {
   res.redirect('/bodies');
 });

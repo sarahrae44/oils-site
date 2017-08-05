@@ -6,7 +6,7 @@
   </head>
   <body>
     <header>
-      <h1>Oils Page</h1>
+      <h1><%=oil.name%></h1>
       <nav>
           <%# for bs... %>
         <table>
@@ -20,7 +20,7 @@
       </nav>
     </header>
     <main>
-      <p>Here is some text about <%=oil.name%>'s properties<p>
+      <p><%=oil.desc%></p>
       <table>
         <tr>
           <td><%=oil.bodySystemName1%></td>
