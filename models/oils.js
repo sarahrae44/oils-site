@@ -1,13 +1,13 @@
 const mongoose = require('mongoose');
-// const Body = require('./bodies.js');
+const Body = require('./bodies.js');
 
 const oilSchema = mongoose.Schema({
-  name: { type: String, required: true },
-  desc: { type: String, required: true },
-  bgImg: { type: String, required: true },
-  iconImg: { type: String, required: true },
-  bodySystemName1: { type: String, required: true },
-  bodySystemText1: { type: String, required: true },
+  name: String,
+  desc: String,
+  bgImg: String,
+  iconImg: String,
+  bodySystemName1: String,
+  bodySystemText1: String,
   // optional below
   bodySystemName2: String,
   bodySystemText2: String,

@@ -14,6 +14,7 @@
             <td>
               <button><a href="/">Home</a></button>
               <button><a href="/oils">Oils</a></button>
+              <button><a href="/bodies">Organ/Systems Index</a></button>
             </td>
           </tr>
         </table>
@@ -33,10 +34,14 @@
           <td><%=body.oilEffectName3%></td>
           <td><%=body.oilEffectText3%></td>
         </tr>
+        <tr>
+          <td><%=body.oilEffectName4%></td>
+          <td><%=body.oilEffectText4%></td>
+        </tr>
       </table>
     </main>
     <footer>
-      <a href="/bodies/<%=body.id%>/edit%>">Edit<%=body.name%></a>
+      <a href="/bodies/<%=body.id%>/edit%>">Edit <%=body.name%></a>
       <form action="/bodies/<%=body.id%>?_method=DELETE" method="POST">
         <input type="submit" value="Delete <%=body.name%>"/>
       </form>

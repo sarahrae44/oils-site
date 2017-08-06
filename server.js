@@ -13,6 +13,8 @@ app.use('/oils', oilsController);
 const bodiesController = require('./controllers/bodies.js');
 app.use('/bodies', bodiesController);
 
+app.use(express.static('public'));
+
 // index page
 app.get('/', (req, res) => {
   // res.send('index page working!')
