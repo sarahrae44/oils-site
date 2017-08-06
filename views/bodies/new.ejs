@@ -28,6 +28,7 @@
 				Icon Image: <input type="text" name="iconImg" /><br/>
         Oil:
         <select name="oilId">
+          <option value="null">Choose an existing oil or add one below</option>
           <% for(let i = 0; i < oils.length; i++) { %>
           <option value="<%=oils[i].id%>"><%=oils[i].name%></option>
           <% } %>
