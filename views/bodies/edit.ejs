@@ -20,12 +20,24 @@
       </nav>
     </header>
     <main>
-      <form action="/bodies/<%=body.id%>?_method=PUT" method="post">
+      <form action="/bodies/<%=body._id%>?_method=PUT" method="post">
         Name: <input type="text" name="name" value="<%=body.name%>" /><br/>
         Description: <input type="text" name="desc" value="<%=body.desc%>" /><br/>
         Background Image: <input type="text" name="bgImg" value="<%=body.bgImg%>"/><br/>
         Icon Image: <input type="text" name="iconImg" value="<%=body.iconImg%>"/><br/>
-        Organ/System Name: <input type="text" name="oilEffectName1" value="<%=body.oilEffectName1%>"/><br/>
+        Oil:
+        <select name="oilId">
+          <% for(let i = 0; i < oils.length; i++) { %>
+          <option value="<%=oils[i]._id%>"
+            <% if(oils[i]._id.toString() === bodyOil._id.toString()){ %>
+            selected
+            <% } %>
+            >
+            <%=oils[i].name%>
+          </option>
+          <% } %>
+        </select>
+        <br/>
         Organ/System Description: <input type="text" name="oilEffectText1" value="<%=body.oilEffectText1%>"/><br/>
         <br/>
         Extra Systems (Optional):<br/>

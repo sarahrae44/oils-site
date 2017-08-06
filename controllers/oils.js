@@ -31,7 +31,20 @@ router.get('/:id', (req, res) => {
 
 router.delete('/:id', (req, res) => {
   Oil.findByIdAndRemove(req.params.id, (err, foundOil) => {
-    res.redirect('/oils');
+    const bodyIds = [];
+    for(let i = 0; i < foundOil.bodies.length; i++) {
+      bodyIds.push(foundOil.bodies[i]._id);
+    }
+    Body.remove(
+      {
+        _id: {
+          $in: bodyIds
+        }
+      },
+      (err, data) => {
+        res.redirect('/oils');
+      }
+    );
   });
 });
 

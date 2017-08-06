@@ -14,7 +14,8 @@ const oilSchema = mongoose.Schema({
   bodySystemName3: String,
   bodySystemText3: String,
   bodySystemName4: String,
-  bodySystemText4: String
+  bodySystemText4: String,
+  bodies: [Body.schema]
 });
 
 const Oil = mongoose.model('Oil', oilSchema);

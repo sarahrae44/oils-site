@@ -14,15 +14,15 @@
             <td>
               <button><a href="/">Home</a></button>
               <button><a href="/oils">Oils</a></button>
-              <button><a href="/bodies/new">Add another organ/system</a></button>
+              <button><a href="/bodies/new">Add an organ/system</a></button>
             </td>
           </tr>
         </table>
       </nav>
     </header>
     <main>
-      <% for(let i = 0; i < bodies.length; i++){ %>
-        <a href="/bodies/<%=bodies[i]._id%>"><img src="<%=bodies[i].iconImg%>"></a> <a href="/bodies/<%=bodies[i]._id%>"><%=bodies[i].name%></a><br/>
+      <% for(let i = 0; i < bodies.length; i++) { %>
+        <a href="/bodies/<%=bodies[i].id%>"><img src="<%=bodies[i].iconImg%>"></a> <a href="/bodies/<%=bodies[i].id%>"><%=bodies[i].name%></a><br/>
       <% } %>
     </main>
   </body>
