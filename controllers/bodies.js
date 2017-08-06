@@ -1,6 +1,6 @@
 const express = require('express');
 const Body = require('../models/bodies.js');
-// const Oil = require('../models/oils.js');
+const Oil = require('../models/oils.js');
 const router = express.Router();
 
 router.get('/', (req, res) => {
@@ -18,7 +18,11 @@ router.post('/', (req, res) => {
 });
 
 router.get('/new', (req, res) => {
-  res.render('bodies/new.ejs');
+  Oil.find({}, (err, allOils) => {
+    res.render('bodies/new.ejs', {
+      oils: allOils
+    });
+  })
 });
 
 router.get('/:id', (req, res) => {

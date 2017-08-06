@@ -26,7 +26,13 @@
         Description: <input type="text" name="desc" /><br/>
         Background Image: <input type="text" name="bgImg" /><br/>
 				Icon Image: <input type="text" name="iconImg" /><br/>
-        Oil: <input type="text" name="oilEffectName1" /><br/>
+        Oil:
+        <select name="oilId">
+          <% for(let i = 0; i < oils.length; i++) { %>
+          <option value="<%=oils[i].id%>"><%=oils[i].name%></option>
+          <% } %>
+        </select>
+        <br/>
         Oil Effect Description: <input type="text" name="oilEffectText1" /><br/>
         <br/>
         Extra Oils (Optional):<br/>

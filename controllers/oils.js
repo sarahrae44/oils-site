@@ -1,6 +1,6 @@
 const express = require('express');
 const Oil = require('../models/oils.js');
-// const Body = require('../models/bodies.js');
+const Body = require('../models/bodies.js');
 const router = express.Router();
 
 router.get('/', (req, res) => {
