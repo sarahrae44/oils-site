@@ -32,9 +32,11 @@ mongoose.connect(mongoUri);
 
 const port = process.env.PORT || 3000;
 
-app.listen(port);
+app.listen(port, (req, res) => {
   console.log('oils site listening');
   console.log('oils site listening with the heroku update');
+});
+
 
 // app.listen(3000, () =>{
 //    console.log('oils site listening');
