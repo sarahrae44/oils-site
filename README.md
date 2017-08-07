@@ -2,6 +2,8 @@
 
 public site: https://oilsite.herokuapp.com/
 
+FOR EDUCATIONAL PURPOSES ONLY
+
 Images used: 
 https://www.pinterest.co.uk/pin/224335625165190930/
 
