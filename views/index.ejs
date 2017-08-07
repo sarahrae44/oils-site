@@ -4,27 +4,50 @@
     <meta charset="utf-8">
     <title>Oils Reference Home Page</title>
     <link rel="icon" href="http://i.imgur.com/m0AjSPy.png">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Special+Elite" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <%# <meta name="viewport" content="width=device-width, initial-scale=1">%>
   </head>
-  <body>
-    <header>
-      <h1>this is the main page</h1>
-      <p>this is some text about the site</p>
-    </header>
+  <div class="container-fluid">
+  <body class="main">
+    <div class="row">
+      <div class="col-md-12 mainHeader">
+        <h1 class="mainh1">Beginner's Guide to Essential Oils</h1>
+        <p class="mainP">An essential oil is a concentrated hydrophobic liquid containing volatile aroma compounds from plants. Essential oils are also known as volatile oils, ethereal oils, aetherolea, or simply as the oil of the plant from which they were extracted, such as oil of clove. An oil is "essential" in the sense that it contains the "essence of" the plant's fragrance—the characteristic fragrance of the plant from which it is derived.<br/>
+        <br/>
+        Essential oils are generally extracted by distillation, often by using steam. Other processes include expression, solvent extraction, absolute oil extraction, resin tapping, and cold pressing. They are used in perfumes, cosmetics, soaps and other products, for flavoring food and drink, and for adding scents to incense and household cleaning products.[<a href="https://en.wikipedia.org/wiki/Essential_oil" target="_blank">1</a>]</p>
+      </div>
+    </div>
     <main>
+      <div class="row">
+        <div class="col-md-12 spacer">
+        </div>
+      </div>
       <%# For bootstrap use %>
-      <table>
-        <tr>
-          <td>
-            <%# or column - not sure; need to look at BS documentation%>
-          <button><a href="/oils">Oil Index</a></button>
-          <img src="#">
-        </td>
-        <td>
-          <button><a href="/bodies">Body Index</a></button>
-          <img src="#">
-        </td>
-        </tr>
-      </table>
-
-  </body>
+      <%# <div class="mainCategoryContainer">%>
+        <div class="row">
+          <div class="col-md-2">&nbsp;</div>
+            <div class="col-md-3 mainCategories">
+            <div class="oilCategory">
+            <%# <div class="mainCategories">%>
+              <%# or column - not sure; need to look at BS documentation%>
+              <button class="mainButton"><a class="whiteText" href="/oils">Oil Index</a></button>
+            </div>
+          <%# </div>%>
+          </div>
+          <div class="col-md-2">&nbsp;</div>
+          <div class="col-md-3 mainCategories">
+            <div class="bodyCategory">
+            <%# <div class="mainCategories">%>
+              <button class="mainButton"><a class="whiteText" href="/bodies">Body Index</a></button>
+            <%# </div>%>
+            </div>
+          </div>
+          <div class="col-md-2">&nbsp;</div>
+        </div>
+      </main>
+    <%# </div>%>
+    </body>
+  </div>
 </html>

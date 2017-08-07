@@ -1,3 +1,77 @@
+.main {
+  background-image: url('http://i.imgur.com/fnwxeY8.jpg');
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  }
+
 .bodies {
-  background-image: url('<%=body.bgImg%>');
+  /*background-color: lightblue;*/
+  /*background-image: url('https://www.studyread.com/wp-content/uploads/2016/01/digestive-system.png');*/
+  background-image: url(<%=body.bgImg%>);
+}
+
+.mainHeader {
+  color: snow;
+  text-align: center;
+  font-family: 'Special Elite', cursive;
+  padding: 2em 4em;
+  background-color: rgba(170, 170, 85, 0.8);
+}
+
+.mainP {
+  color: #1d2b00;
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+  font-family: 'Special Elite', cursive;
+  font-size: 1.1em;
+  line-height: 1.6em;
+}
+
+.mainCategoryContainer {
+  text-align: center;
+  display: flex;
+  margin: 0 auto;
+}
+
+.mainCategories {
+  background-color: rgba(255, 255, 255, 0.6);
+  /*display: inline-block;*/
+  /*padding: 100px;*/
+}
+.spacer {
+  padding: 20px;
+}
+
+.oilCategory {
+  background-image: url('http://i.imgur.com/jzoGseU.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 150px 0;
+  z-index: -1;
+  text-align: center;
+}
+
+.bodyCategory {
+  background-image: url('http://i.imgur.com/Blzaq54.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 150px 0;
+  z-index: -1;
+  text-align: center;
+}
+
+.mainButton {
+  background-color: #999474;
+  border: 0;
+  padding: 10px 20px;
+  color: snow;
+}
+
+.whiteText {
+  color: snow;
+  font-size: 1.5em;
+  font-family: 'Josefin Sans', sans-serif;
+  text-decoration: none;
 }
