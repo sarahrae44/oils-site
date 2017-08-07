@@ -2,30 +2,35 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <title>Organ/Systems Index Page</title>
     <link rel="icon" href="http://i.imgur.com/m0AjSPy.png">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Special+Elite" rel="stylesheet">
     <link rel="stylesheet" href="/style.css">
-    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   </head>
-  <body>
-    <header>
-      <h1>Organs/Systems Page</h1>
-      <nav>
-          <%# for bs... %>
-        <table>
-          <tr>
-            <td>
-              <button><a href="/">Home</a></button>
-              <button><a href="/oils">Oils</a></button>
-              <button><a href="/bodies/new">Add an organ/system</a></button>
-            </td>
-          </tr>
-        </table>
-      </nav>
-    </header>
+  <div class="container-fluid">
+    <body class="main">
+      <div class="row">
+        <div class="col-md-12 mainHeader">
+          <h1 class="mainh1">Organs/Systems Reference Page</h1>
+          <nav>
+            <button class="navButton"><a href="/">Home</a></button>
+            <button class="navButton"><a href="/oils">Oils</a></button>
+            <button class="navButton"><a href="/bodies/new">Add an organ/system</a></button>
+          </nav>
+        </div>
+      </div>
+    </div>
     <main>
-      <% for(let i = 0; i < bodies.length; i++) { %>
-        <a href="/bodies/<%=bodies[i].id%>"><img src="<%=bodies[i].iconImg%>"></a> <a href="/bodies/<%=bodies[i].id%>"><%=bodies[i].name%></a><br/>
-      <% } %>
+      <div class="listingContainer">
+        <% for(let i = 0; i < bodies.length; i++) { %>
+          <div class="listingItem indexListing mainCategories">
+            <a href="/bodies/<%=bodies[i].id%>"><img src="<%=bodies[i].iconImg%>"></a><br/>
+            <div class="buttonContainer">
+              <a class="mainButton" href="/bodies/<%=bodies[i].id%>"><%=bodies[i].name%></a>
+            </div>
+          </div>
+        <% } %>
     </main>
   </body>
 </html>
