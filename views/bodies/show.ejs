@@ -24,8 +24,8 @@
       <p><%=body.desc%><p>
       <table>
         <tr>
-          <td><%=oil.name%></td>
-          <td><%=body.oilEffectText1%></td>
+          <td><%=body.oilEffectName%></td>
+          <td><%=body.oilEffectText%></td>
         </tr>
         <tr>
           <td><%=body.oilEffectName2%></td>
@@ -41,6 +41,10 @@
       </table>
     </main>
     <footer>
+      <section>
+        <h2>Oil(s) associated with <%=body.name%></h2>
+
+      </section>
       <a href="/bodies/<%=body.id%>/edit%>">Edit <%=body.name%></a>
       <form action="/bodies/<%=body.id%>?_method=DELETE" method="POST">
         <input type="submit" value="Delete <%=body.name%>"/>

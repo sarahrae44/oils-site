@@ -12,20 +12,32 @@ router.get('/', (req, res) => {
 });
 
 router.post('/', (req, res) => {
-  Oil.create(req.body, (err, createdOil) => {
-    res.redirect('/oils');
+  Body.findById(req.body.bodyId, (err, foundBody) => {
+    Oil.create(req.body, (err, createdOil) => {
+      foundBody.oils.push(createdOil);
+      foundBody.save((err, data) => {
+        res.redirect('/oils');
+      });
+    });
   });
 });
 
 router.get('/new', (req, res) => {
-  res.render('oils/new.ejs');
+  Body.find({}, (err, allBodies) => {
+    res.render('oils/new.ejs', {
+      bodies: allBodies
+    });
+  });
 });
 
 router.get('/:id', (req, res) => {
   Oil.findById(req.params.id, (err, foundOil) => {
-    res.render('oils/show.ejs', {
-      oil: foundOil
-    });
+    Body.findOne({'oils._id':req.params.id}, (err, foundBody) => {
+      res.render('oils/show.ejs', {
+        body: foundBody,
+        oil: foundOil
+      });
+    })
   });
 });
 
@@ -57,8 +69,14 @@ router.get('/:id/edit', (req, res) => {
 });
 
 router.put('/:id', (req, res) => {
-  Oil.findByIdAndUpdate(req.params.id, req.body, () => {
-    res.redirect('/oils');
+  Oil.findByIdAndUpdate(req.params.id, req.body, { new: true }, (err, updatedOil) => {
+    Body.findOne({ 'oils._id':req.param.id }, (err, foundBody) => {
+      foundBody.oils.id(req.params.id).remove();
+      foundBody.oils.push(updatedOil);
+      foundBody.save((err, data) => {
+        res.redirect('/oils/'+req.params.id);
+      });
+    });
   });
 });
 

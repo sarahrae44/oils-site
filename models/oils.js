@@ -6,8 +6,8 @@ const oilSchema = mongoose.Schema({
   desc: String,
   bgImg: String,
   iconImg: String,
-  bodySystemName1: String,
-  bodySystemText1: String,
+  bodySystemName: String,
+  bodySystemText: String,
   // optional below
   bodySystemName2: String,
   bodySystemText2: String,

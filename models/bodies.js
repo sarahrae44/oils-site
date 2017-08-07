@@ -6,15 +6,16 @@ const bodySchema = mongoose.Schema({
   desc: String,
   bgImg: String,
   iconImg: String,
-  oilEffectName1: String,
-  oilEffectText1: String,
+  oilEffectName: String,
+  oilEffectText: String
   // optional below
-  oilEffectName2: String,
-  oilEffectText2: String,
-  oilEffectName3: String,
-  oilEffectText3: String,
-  oilEffectName4: String,
-  oilEffectText4: String,
+  // oilEffectName2: String,
+  // oilEffectText2: String,
+  // oilEffectName3: String,
+  // oilEffectText3: String,
+  // oilEffectName4: String,
+  // oilEffectText4: String,
+  // oils: [Oil.schema]
 });
 
 const Body = mongoose.model('Body', bodySchema);
