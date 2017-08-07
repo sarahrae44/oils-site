@@ -75,3 +75,23 @@
   font-family: 'Josefin Sans', sans-serif;
   text-decoration: none;
 }
+
+.indexListing {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+nav {
+  text-align: center;
+}
+
+.navButton {
+  background-color: snow;
+  margin: 40px 20px 0 20px;
+  padding: 10px 20px;
+  border: 0;
+}
+
+.buttonContainer {
+  padding-bottom: 20px;
+}
