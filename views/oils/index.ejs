@@ -26,18 +26,15 @@
     </div>
   </div>
   <main>
-    <div class="row">
-      <div class="col-md-2"></div>
+    <div class="listingContainer">
         <% for(let i = 0; i < oils.length; i++){ %>
-          <div class="col-md-2 mainCategories indexListing">
+          <div class="listingItem indexListing mainCategories">
             <a href="/oils/<%=oils[i]._id%>"><img src="<%=oils[i].iconImg%>"></a> <br/>
             <div class="buttonContainer">
-            <button class="mainButton"><a class="whiteText" href="/oils/<%=oils[i]._id%>"><%=oils[i].name%></a></button>
+              <button class="mainButton"><a class="whiteText" href="/oils/<%=oils[i]._id%>"><%=oils[i].name%></a></button>
             </div>
-            </div>
-          <div class="col-md-1"></div>
+          </div>
     		<% } %>
-        <div class="col-md-1"></div>
       </div>
     </main>
   </body>

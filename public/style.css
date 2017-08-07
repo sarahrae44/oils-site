@@ -95,3 +95,17 @@ nav {
 .buttonContainer {
   padding-bottom: 20px;
 }
+
+.listingContainer {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+.listingItem {
+  flex-grow: 1;
+  margin: 1em 5em 2em 5em;
+  max-width: 280px;
+  min-width: 240px;
+}
