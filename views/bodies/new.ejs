@@ -29,7 +29,6 @@
         <form class="editForm" action="/bodies" method="post">
           Name: <input class="editFields" type="text" name="name" /><br/>
           Description: <input class="editFields" type="text" name="desc" /><br/>
-          Background Image: <input class="editFields" type="text" name="bgImg" /><br/>
   				Icon Image: <input class="editFields" type="text" name="iconImg" /><br/>
           Oil:
           <select class="editFields" name="oilId">
@@ -41,9 +40,9 @@
           <br/>
           Oil Effect Description: <input class="editFields" type="text" name="oilEffectText" /><br/>
           <br/>
-          Don't see the oil you're looking for here? Add it here:<br/>
+          <%# Don't see the oil you're looking for here? Add it here:<br/>
           Add a New Oil: <input class="editFields" type="text" name="oilEffectName" /><br/>
-          <br/>
+          <br/>%>
   				<input class="editButton" type="submit" value="Add Organ/System" class="addButton"/>
         </div>
         </form>
