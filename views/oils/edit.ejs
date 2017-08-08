@@ -2,34 +2,43 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Edit <%=oil.name%></title>
+    <link rel="icon" href="http://i.imgur.com/m0AjSPy.png">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Special+Elite" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   </head>
-  <body>
-    <header>
-      <h1>Edit <%=oil.name%></h1>
-      <nav>
-          <%# for bs... %>
-        <table>
-          <tr>
-            <td>
-              <button><a href="/">Home</a></button>
-              <button><a href="/bodies">Body</a></button>
-            </td>
-          </tr>
-        </table>
-      </nav>
-    </header>
+  <div class="container-fluid">
+  <body class="main">
+    <div class="row">
+      <div class="col-md-12 mainHeader">
+        <h1 class="mainh1">Edit <%=oil.name%></h1>
+        <nav>
+          <button class="navButton"><a href="/">Home</a></button>
+          <button class="navButton"><a href="/bodies">Body</a></button>
+        </nav>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 spacer">
+      </div>
+    </div>
     <main>
-      <form action="/oils/<%=oil.id%>?_method=PUT" method="post">
-        Name: <input type="text" name="name" value="<%=oil.name%>" /><br/>
-        Description: <input type="text" name="desc" value="<%=oil.desc%>" /><br/>
-        Background Image: <input type="text" name="bgImg" value="<%=oil.bgImg%>"/><br/>
-        Icon Image: <input type="text" name="iconImg" value="<%=oil.iconImg%>"/><br/>
-        Organ/System Name: <input type="text" name="bodySystemName" value="<%=oil.bodySystemName%>"/><br/>
-        Organ/System Description: <input type="text" name="bodySystemText" value="<%=oil.bodySystemText%>"/><br/>
-        <br/>
-        <input type="submit" value="Update <%=oil.name%>"/>
-      </form>
+      <div class="listingContainer">
+        <div class="editItem itemListing mainCategories">
+          <form action="/oils/<%=oil.id%>?_method=PUT" method="post">
+          Name: <input type="text" name="name" value="<%=oil.name%>" /><br/>
+          Description: <input type="text" name="desc" value="<%=oil.desc%>" /><br/>
+          Background Image: <input type="text" name="bgImg" value="<%=oil.bgImg%>"/><br/>
+          Icon Image: <input type="text" name="iconImg" value="<%=oil.iconImg%>"/><br/>
+          Organ/System Name: <input type="text" name="bodySystemName" value="<%=oil.bodySystemName%>"/><br/>
+          Organ/System Description: <input type="text" name="bodySystemText" value="<%=oil.bodySystemText%>"/><br/>
+          <br/>
+          <input class="mainButton" type="submit" value="Update <%=oil.name%>"/>
+          </form>
+        </div>
+      </div>
     </main>
   </body>
+</div>
 </html>

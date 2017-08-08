@@ -146,3 +146,9 @@ nav {
   color: white;
   text-decoration: none;
 }
+
+.editItem {
+  flex-grow: 1;
+  margin: 1em 5em 2em 5em;
+  max-width: 400px;
+}
