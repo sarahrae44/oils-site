@@ -14,11 +14,11 @@ router.get('/', (req, res) => {
 router.post('/', (req, res) => {
   Body.findById(req.body.bodyId, (err, foundBody) => {
     Oil.create(req.body, (err, createdOil) => {
-      foundBody.oils.push(createdOil);
-      foundBody.save((err, data) => {
+      // foundBody.oils.push(createdOil);
+      // foundBody.save((err, data) => {
         res.redirect('/oils');
       });
-    });
+    // });
   });
 });
 
