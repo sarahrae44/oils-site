@@ -2,53 +2,51 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Add a new organ/system</title>
+    <link rel="icon" href="http://i.imgur.com/m0AjSPy.png">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Special+Elite" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   </head>
-  <body>
-    <header>
-      <h1>Add an organ/system</h1>
-      <nav>
-          <%# for bs... %>
-        <table>
-          <tr>
-            <td>
-              <button><a href="/">Home</a></button>
-              <button><a href="/oils">Oils</a></button>
-              <button><a href="/bodies">Organ/Systems Index</a></button>
-            </td>
-          </tr>
-        </table>
-      </nav>
-    </header>
-    <main>
-      <form action="/bodies" method="post">
-        Name: <input type="text" name="name" /><br/>
-        Description: <input type="text" name="desc" /><br/>
-        Background Image: <input type="text" name="bgImg" /><br/>
-				Icon Image: <input type="text" name="iconImg" /><br/>
-        Oil:
-        <select name="oilId">
-          <option value="null">Choose an existing oil or add one below</option>
-          <% for(let i = 0; i < oils.length; i++) { %>
-          <option value="<%=oils[i].id%>"><%=oils[i].name%></option>
-          <% } %>
-        </select>
-        <br/>
-        Don't see the oil you're looking for here? Add it below:<br/>
-        Oil: <input type="text" name="oilEffectName" /><br/>
-        Oil Effect Description: <input type="text" name="oilEffectText" /><br/>
-        <br/>
-
-        <%# Extra Oils (Optional):<br/>
-        Oil: <input type="text" name="oilEffectName2" /><br/>
-        Oil Effect Description: <input type="text" name="oilEffectText2" /><br/>
-        Oil: <input type="text" name="oilEffectName3" /><br/>
-        Oil Effect Description: <input type="text" name="oilEffectText3" /><br/>
-        Oil: <input type="text" name="oilEffectName4" /><br/>
-        Oil Effect Description: <input type="text" name="oilEffectText4" /><br/>%>
-				<input type="submit" value="Add Organ/System" class="addButton"/>
+  <div class="container-fluid">
+  <body class="main">
+    <div class="row">
+      <div class="col-md-12 mainHeader">
+        <h1 class="mainh1">Add an organ/system</h1>
+        <nav>
+          <button class="navButton"><a href="/">Home</a></button>
+          <button class="navButton"><a href="/oils">Oils</a></button>
+          <button class="navButton"><a href="/bodies">Organ/Systems Index</a></button>
+        </nav>
       </div>
-      </form>
+    </div>
+    <div class="row">
+      <div class="col-md-12 spacer">
+      </div>
+    </div>
+    <main>
+      <div class="listingContainer">
+        <form class="editForm" action="/bodies" method="post">
+          Name: <input class="editFields" type="text" name="name" /><br/>
+          Description: <input class="editFields" type="text" name="desc" /><br/>
+          Background Image: <input class="editFields" type="text" name="bgImg" /><br/>
+  				Icon Image: <input class="editFields" type="text" name="iconImg" /><br/>
+          Oil:
+          <select class="editFields" name="oilId">
+            <option value="null">Choose an existing oil or add one below</option>
+            <% for(let i = 0; i < oils.length; i++) { %>
+            <option value="<%=oils[i].id%>"><%=oils[i].name%></option>
+            <% } %>
+          </select>
+          <br/>
+          Oil Effect Description: <input class="editFields" type="text" name="oilEffectText" /><br/>
+          <br/>
+          Don't see the oil you're looking for here? Add it here:<br/>
+          Add a New Oil: <input class="editFields" type="text" name="oilEffectName" /><br/>
+          <br/>
+  				<input class="editButton" type="submit" value="Add Organ/System" class="addButton"/>
+        </div>
+        </form>
     </main>
   </body>
 </html>
