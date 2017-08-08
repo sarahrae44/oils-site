@@ -2,55 +2,56 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <title><%=body.name%> Page</title>
     <link rel="icon" href="http://i.imgur.com/m0AjSPy.png">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Special+Elite" rel="stylesheet">
     <link rel="stylesheet" href="/style.css">
-    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   </head>
-  <body>
-    <header>
-      <h1><%=body.name%></h1>
-      <nav>
-          <%# for bs... %>
+  <div class="container-fluid">
+    <body class="main">
+      <div class="row">
+        <div class="col-md-12 mainHeader">
+          <h1 class="mainh1"><%=body.name%></h1>
+          <p class="showP"><%=body.desc%><p>
+          <nav>
+            <button class="navButton"><a href="/">Home</a></button>
+            <button class="navButton"><a href="/oils">Oils</a></button>
+          </nav>
+        </div>
+      </div>
+      <section class="listingBackground">
+        <h2 class="listingHeader">Oil(s) associated with <%=body.name%></h2>
+        <div class="listingContainer">
+          <%# put body show snippet here %>
+          </section>
         <table>
           <tr>
-            <td>
-              <button><a href="/">Home</a></button>
-              <button><a href="/oils">Oils</a></button>
-              <button><a href="/bodies">Organ/Systems Index</a></button>
-            </td>
+            <td><%=body.oilEffectName%></td>
+            <td><%=body.oilEffectText%></td>
+          </tr>
+          <tr>
+            <td><%=body.oilEffectName2%></td>
+            <td><%=body.oilEffectText2%><br/>
+          <tr>
+            <td><%=body.oilEffectName3%></td>
+            <td><%=body.oilEffectText3%></td>
+          </tr>
+          <tr>
+            <td><%=body.oilEffectName4%></td>
+            <td><%=body.oilEffectText4%></td>
           </tr>
         </table>
-      </nav>
-    </header>
-    <main>
-      <p><%=body.desc%><p>
-      <table>
-        <tr>
-          <td><%=body.oilEffectName%></td>
-          <td><%=body.oilEffectText%></td>
-        </tr>
-        <tr>
-          <td><%=body.oilEffectName2%></td>
-          <td><%=body.oilEffectText2%><br/>
-        <tr>
-          <td><%=body.oilEffectName3%></td>
-          <td><%=body.oilEffectText3%></td>
-        </tr>
-        <tr>
-          <td><%=body.oilEffectName4%></td>
-          <td><%=body.oilEffectText4%></td>
-        </tr>
-      </table>
-    </main>
-    <footer>
-      <section>
-        <h2>Oil(s) associated with <%=body.name%></h2>
-
-      </section>
-      <a href="/bodies/<%=body.id%>/edit%>">Edit <%=body.name%></a>
-      <form action="/bodies/<%=body.id%>?_method=DELETE" method="POST">
-        <input type="submit" value="Delete <%=body.name%>"/>
-      </form>
-    </footer>
-  </body>
+      <footer>
+        <nav>
+          <div class="listingContainer">
+            <button class="footerButton"><a href="/bodies/<%=body.id%>/edit%>">Edit <%=body.name%></a></button>
+        <form action="/bodies/<%=body.id%>?_method=DELETE" method="POST">
+          <input class="footerButton" type="submit" value="Delete <%=body.name%>"/>
+        </form>
+      </div>
+    </nav>
+      </footer>
+    </body>
+  </div>
 </html>
