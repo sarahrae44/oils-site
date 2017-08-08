@@ -109,3 +109,40 @@ nav {
   max-width: 280px;
   min-width: 240px;
 }
+
+.showP {
+  color: #1d2b00;
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+  font-family: 'Special Elite', cursive;
+  font-size: 1.1em;
+  line-height: 1.6em;
+  padding-bottom: 20px;
+}
+
+.listingBackground {
+  background-color: rgba(255, 255, 255, 0.4);
+  margin: 2em 4em;
+}
+
+.listingHeader {
+  font-family: 'Special Elite', cursive;
+  padding: 20px;
+  text-align: center;
+}
+
+.footerButton {
+  background-color: #192c0e;
+  margin: 10px;
+  padding: 10px 20px;
+  border: 0;
+  font-family: 'Special Elite', cursive;
+  color: snow;
+  display: inline-flex;
+}
+
+.footerButton a {
+  color: white;
+  text-decoration: none;
+}
