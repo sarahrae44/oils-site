@@ -29,7 +29,7 @@
     <div class="listingContainer">
         <% for(let i = 0; i < oils.length; i++){ %>
           <div class="listingItem indexListing mainCategories">
-            <a href="/oils/<%=oils[i]._id%>"><img src="<%=oils[i].iconImg%>"></a> <br/>
+            <a href="/oils/<%=oils[i]._id%>"><img class="listingImg" src="<%=oils[i].iconImg%>"></a> <br/>
             <div class="buttonContainer">
               <button class="mainButton"><a class="whiteText" href="/oils/<%=oils[i]._id%>"><%=oils[i].name%></a></button>
             </div>

@@ -26,7 +26,7 @@
           <div class="listingContainer">
               <% for(let i = 0; i < oil.bodies.length; i++) { %>
                 <div class="listingItem indexListing mainCategories">
-                  <a href="/bodies/<%=oil.bodies[i]._id%>"><img src="<%=oil.bodies[i].iconImg%>"></a><br/>
+                  <a href="/bodies/<%=oil.bodies[i]._id%>"><img class="listingImg" src="<%=oil.bodies[i].iconImg%>"></a><br/>
                   <div class="buttonContainer">
                     <button class="mainButton"><a class="whiteText" href="/bodies/<%=oil.bodies[i]._id%>"><%=oil.bodies[i].name%></a></button>
                 </div>
