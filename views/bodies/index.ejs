@@ -11,7 +11,7 @@
   <div class="container-fluid">
     <body class="main">
       <div class="row">
-        <div class="col-md-12 mainHeader">
+        <div class="col-md-12 mainIndexHeader">
           <h1 class="mainh1">Organs/Systems Reference Page</h1>
           <nav>
             <button class="navButton"><a href="/">Home</a></button>
@@ -29,7 +29,8 @@
       <div class="listingContainer">
         <% for(let i = 0; i < bodies.length; i++) { %>
           <div class="listingItem indexListing mainCategories">
-            <a href="/bodies/<%=bodies[i].id%>"><img class="listingImg" src="<%=bodies[i].iconImg%>"></a><br/>
+            <a href="/bodies/<%=bodies[i].id%>">
+            <div class="listingImgContainer"><img class="listingImg" src="<%=bodies[i].iconImg%>"></div></a><br/>
             <div class="buttonContainer">
               <a class="mainButton" href="/bodies/<%=bodies[i].id%>"><%=bodies[i].name%></a>
             </div>

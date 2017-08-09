@@ -11,7 +11,7 @@
   <div class="container-fluid">
     <body class="main">
       <div class="row">
-        <div class="col-md-12 mainHeader">
+        <div class="col-md-12 mainIndexHeader">
           <h1 class="mainh1">Essential Oils Reference Page</h1>
       <nav>
           <%# for bs... %>
@@ -29,9 +29,10 @@
     <div class="listingContainer">
         <% for(let i = 0; i < oils.length; i++){ %>
           <div class="listingItem indexListing mainCategories">
-            <a href="/oils/<%=oils[i]._id%>"><img class="listingImg" src="<%=oils[i].iconImg%>"></a> <br/>
+            <a href="/oils/<%=oils[i]._id%>">
+            <div class="listingImgContainer"><img class="listingImg" src="<%=oils[i].iconImg%>"></div></a> <br/>
             <div class="buttonContainer">
-              <button class="mainButton"><a class="whiteText" href="/oils/<%=oils[i]._id%>"><%=oils[i].name%></a></button>
+              <button class="listingButton"><a class="whiteText" href="/oils/<%=oils[i]._id%>"><%=oils[i].name%></a></button>
             </div>
           </div>
     		<% } %>

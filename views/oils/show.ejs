@@ -12,8 +12,6 @@
     <body class="main">
       <div class="row">
         <div class="col-md-12 mainHeader">
-          <h1 class="mainh1"><%=oil.name%></h1>
-          <p class="showP"><%=oil.desc%></p>
           <nav>
             <button class="navButton"><a href="/">Home</a></button>
             <button class="navButton"><a href="/bodies">Body</a></button>
@@ -21,12 +19,28 @@
           </nav>
         </div>
       </div>
+      <div class="row">
+        <div class="col-md-12 mainHeader">
+          <h1 class="mainh1"><%=oil.name%></h1>
+        </div>
+      </div>
+        <div class="row mainHeader">
+          <div class="col-md-2">
+            <img class="headerImg" src="<%=oil.iconImg%>"/>
+          </div>
+          <div class="col-md-10">
+            <p class="descP"><%=oil.desc%></p>
+          </div>
+      </div>
+
         <section class="listingBackground">
           <h2 class="listingHeader">Body System(s) associated with <%=oil.name%></h2>
           <div class="listingContainer">
               <% for(let i = 0; i < oil.bodies.length; i++) { %>
                 <div class="listingItem indexListing mainCategories">
-                  <a href="/bodies/<%=oil.bodies[i]._id%>"><img class="listingImg" src="<%=oil.bodies[i].iconImg%>"></a><br/>
+                  <a href="/bodies/<%=oil.bodies[i]._id%>">
+                  <div class="listingImgContainer"><img class="listingImg" src="<%=oil.bodies[i].iconImg%>"></div></a><br/>
+                  <div class="descTextContainer"><%=oil.bodies[i].oilEffectText%></div>
                   <div class="buttonContainer">
                     <button class="mainButton"><a class="whiteText" href="/bodies/<%=oil.bodies[i]._id%>"><%=oil.bodies[i].name%></a></button>
                 </div>
