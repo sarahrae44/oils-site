@@ -24,12 +24,13 @@
         <section class="listingBackground">
           <h2 class="listingHeader">Body System(s) associated with <%=oil.name%></h2>
           <div class="listingContainer">
-          <div class="listingItem indexListing mainCategories">
-            <% for(let i = 0; i < oil.bodies.length; i++) { %>
-            <a href="/bodies/<%=oil.bodies[i]._id%>"><img src="<%=oil.bodies[i].iconImg%>"></a><br/>
-            <div class="buttonContainer">
-            <button class="mainButton"><a class="whiteText" href="/bodies/<%=oil.bodies[i]._id%>"><%=oil.bodies[i].name%></a></button>
-            </div>
+              <% for(let i = 0; i < oil.bodies.length; i++) { %>
+                <div class="listingItem indexListing mainCategories">
+                  <a href="/bodies/<%=oil.bodies[i]._id%>"><img src="<%=oil.bodies[i].iconImg%>"></a><br/>
+                  <div class="buttonContainer">
+                    <button class="mainButton"><a class="whiteText" href="/bodies/<%=oil.bodies[i]._id%>"><%=oil.bodies[i].name%></a></button>
+                </div>
+              </div>
             <% } %>
           </div>
         </section>

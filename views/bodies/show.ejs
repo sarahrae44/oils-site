@@ -13,6 +13,7 @@
       <div class="row">
         <div class="col-md-12 mainHeader">
           <h1 class="mainh1"><%=body.name%></h1>
+          <img src="<%=body.iconImg%>"/>
           <p class="showP"><%=body.desc%><p>
           <nav>
             <button class="navButton"><a href="/">Home</a></button>
@@ -20,37 +21,19 @@
           </nav>
         </div>
       </div>
-      <section class="listingBackground">
-        <h2 class="listingHeader">Oil(s) associated with <%=body.name%></h2>
-        <div class="listingContainer">
-          <%# put body show snippet here %>
-          </section>
-        <table>
-          <tr>
-            <td><%=body.oilEffectName%></td>
-            <td><%=body.oilEffectText%></td>
-          </tr>
-          <tr>
-            <td><%=body.oilEffectName2%></td>
-            <td><%=body.oilEffectText2%><br/>
-          <tr>
-            <td><%=body.oilEffectName3%></td>
-            <td><%=body.oilEffectText3%></td>
-          </tr>
-          <tr>
-            <td><%=body.oilEffectName4%></td>
-            <td><%=body.oilEffectText4%></td>
-          </tr>
-        </table>
+      <div class="row">
+        <div class="col-md-12 spacer">
+        </div>
+      </div>
       <footer>
         <nav>
           <div class="listingContainer">
             <button class="footerButton"><a href="/bodies/<%=body.id%>/edit%>">Edit <%=body.name%></a></button>
-        <form action="/bodies/<%=body.id%>?_method=DELETE" method="POST">
-          <input class="footerButton" type="submit" value="Delete <%=body.name%>"/>
-        </form>
-      </div>
-    </nav>
+            <form action="/bodies/<%=body.id%>?_method=DELETE" method="POST">
+              <input class="footerButton" type="submit" value="Delete <%=body.name%>"/>
+            </form>
+          </div>
+        </nav>
       </footer>
     </body>
   </div>
