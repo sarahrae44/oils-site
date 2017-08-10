@@ -7,46 +7,52 @@
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Special+Elite" rel="stylesheet">
     <link rel="stylesheet" href="/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <div class="container-fluid">
-  <body class="main">
-    <div class="row">
-      <div class="col-md-12 mainIndexHeader">
-        <h1 class="mainh1">Edit <%=body.name%></h1>
-        <nav>
-          <button class="navButton"><a href="/">Home</a></button>
-          <button class="navButton"><a href="/oils">Oils</a></button>
-        </nav>
+    <body class="main">
+      <div class="row">
+        <div class="col-md-12 mainIndexHeader">
+          <h1 class="mainh1">Edit <%=body.name%></h1>
+          <nav>
+            <button class="navButton"><a href="/">Home</a></button>
+            <button class="navButton"><a href="/oils">Oils</a></button>
+          </nav>
+        </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="col-md-12 spacer">
+      <div class="row">
+        <div class="col-md-12 spacer">
+        </div>
       </div>
-    </div>
-    <main>
-      <div class="listingContainer">
-        <form class="editForm" action="/bodies/<%=body._id%>?_method=PUT" method="post">
-          Name: <input type="text" class="editFields" name="name" value="<%=body.name%>" /><br/>
-          Description: <input type="text" class="editFields" name="desc" value="<%=body.desc%>" /><br/>
-          Icon Image: <input type="text" class="editFields" name="iconImg" value="<%=body.iconImg%>"/><br/>
-          Oil:
-            <select class="editFields" name="oilId">
-              <% for(let i = 0; i < oils.length; i++) { %>
-              <option value="<%=oils[i]._id%>"
-                <% if(oils[i]._id.toString() === bodyOil._id.toString()){ %>
-                selected
-                <% } %>
-              >
-              <%=oils[i].name%>
-              </option>
-              <% } %>
-            </select><br/>
-          Organ/System Description: <input class="editFields" type="text" name="oilEffectText" value="<%=body.oilEffectText%>"/><br/>
-          <br/>
-          <input class="editButton" type="submit" value="Update <%=body.name%>"/>
-        </form>
-      </div>
-    </main>
-  </body>
-</div>
+      <main>
+        <div class="editPageContainer">
+          <div class="listingContainer">
+            <form class="editForm" action="/bodies/<%=body._id%>?_method=PUT" method="post">
+              Name: <input type="text" class="editFields" name="name" value="<%=body.name%>" /><br/>
+              Description: <input type="text" class="editFields" name="desc" value="<%=body.desc%>" /><br/>
+              Icon Image: <input type="text" class="editFields" name="iconImg" value="<%=body.iconImg%>"/><br/>
+              Oil:
+                <select class="editFields" name="oilId">
+                  <% for(let i = 0; i < oils.length; i++) { %>
+                  <option value="<%=oils[i]._id%>"
+                    <% if(oils[i]._id.toString() === bodyOil._id.toString()){ %>
+                    selected
+                    <% } %>
+                  >
+                  <%=oils[i].name%>
+                  </option>
+                  <% } %>
+                </select><br/>
+              Organ/System Description: <input class="editFields" type="text" name="oilEffectText" value="<%=body.oilEffectText%>"/><br/>
+              <br/>
+              <input class="editButton" type="submit" value="Update <%=body.name%>"/>
+            </form>
+          </div>
+        </div>
+      </main>
+    </body>
+    <footer>
+      <% include ../../partials/footers.ejs %>
+    </footer>
+  </div>
 </html>

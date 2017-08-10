@@ -7,6 +7,8 @@
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Special+Elite" rel="stylesheet">
     <link rel="stylesheet" href="/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
   </head>
   <div class="container-fluid">
     <body class="main">
@@ -32,32 +34,34 @@
             <p class="descP"><%=oil.desc%></p>
           </div>
       </div>
-
-        <section class="listingBackground">
-          <h2 class="listingHeader">Body System(s) associated with <%=oil.name%></h2>
-          <div class="listingContainer">
-              <% for(let i = 0; i < oil.bodies.length; i++) { %>
-                <div class="listingItem indexListing mainCategories">
-                  <a href="/bodies/<%=oil.bodies[i]._id%>">
-                  <div class="listingImgContainer"><img class="listingImg" src="<%=oil.bodies[i].iconImg%>"></div></a><br/>
-                  <div class="descTextContainer"><%=oil.bodies[i].oilEffectText%></div>
-                  <div class="buttonContainer">
-                    <button class="mainButton"><a class="whiteText" href="/bodies/<%=oil.bodies[i]._id%>"><%=oil.bodies[i].name%></a></button>
-                </div>
-              </div>
-            <% } %>
-          </div>
-        </section>
-        <footer>
+      <section class="listingBackground">
+        <h2 class="listingHeader">Body System(s) associated with <%=oil.name%></h2>
+        <div class="listingContainer">
+          <% for(let i = 0; i < oil.bodies.length; i++) { %>
+            <div class="listingItem indexListing mainCategories">
+            <a href="/bodies/<%=oil.bodies[i]._id%>">
+            <div class="listingImgContainer"><img class="listingImg" src="<%=oil.bodies[i].iconImg%>"></div></a><br/>
+            <div class="descTextContainer"><%=oil.bodies[i].oilEffectText%></div>
+            <div class="buttonContainer">
+            <button class="mainButton"><a class="whiteText" href="/bodies/<%=oil.bodies[i]._id%>"><%=oil.bodies[i].name%></a></button>
+            </div>
+            </div>
+          <% } %>
+        </div>
+      </section>
+      <footer>
         <nav>
           <div class="listingContainer">
-          <button class="footerButton"><a href="/oils/<%=oil.id%>/edit%>">Edit <%=oil.name%></a></button>
-          <form action="/oils/<%=oil.id%>?_method=DELETE" method="POST">
-            <input class="footerButton" type="submit" value="Delete <%=oil.name%>"/>
-          </form>
-        </div>
+            <button class="footerButton"><a href="/oils/<%=oil.id%>/edit%>">Edit <%=oil.name%></a></button>
+            <form action="/oils/<%=oil.id%>?_method=DELETE" method="POST">
+              <input class="footerButton" type="submit" value="Delete <%=oil.name%>"/>
+            </form>
+          </div>
         </nav>
       </footer>
     </body>
+    <footer>
+      <% include ../../partials/footers.ejs %>
+    </footer>
   </div>
 </html>

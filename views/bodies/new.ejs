@@ -7,45 +7,49 @@
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Special+Elite" rel="stylesheet">
     <link rel="stylesheet" href="/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <div class="container-fluid">
-  <body class="main">
-    <div class="row">
-      <div class="col-md-12 mainIndexHeader">
-        <h1 class="mainh1">Add an organ/system</h1>
-        <nav>
-          <button class="navButton"><a href="/">Home</a></button>
-          <button class="navButton"><a href="/oils">Oils</a></button>
-          <button class="navButton"><a href="/bodies">Body</a></button>
-        </nav>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-12 spacer">
-      </div>
-    </div>
-    <main>
-      <div class="listingContainer">
-        <form class="editForm" action="/bodies" method="post">
-          Name: <input class="editFields" type="text" name="name" /><br/>
-          Description: <input class="editFields" type="text" name="desc" /><br/>
-  				Icon Image: <input class="editFields" type="text" name="iconImg" /><br/>
-          Oil:
-          <select class="editFields" name="oilId">
-            <option value="null">Choose an essential oil</option>
-            <% for(let i = 0; i < oils.length; i++) { %>
-            <option value="<%=oils[i].id%>"><%=oils[i].name%></option>
-            <% } %>
-          </select>
-          <br/>
-          Oil Effect Description: <input class="editFields" type="text" name="oilEffectText" /><br/>
-          <br/>
-          <%# Don't see the oil you're looking for here? Add it here:<br/>
-          Add a New Oil: <input class="editFields" type="text" name="oilEffectName" /><br/>
-          <br/>%>
-  				<input class="editButton" type="submit" value="Add Organ/System" class="addButton"/>
+    <body class="main">
+      <div class="row">
+        <div class="col-md-12 mainIndexHeader">
+          <h1 class="mainh1">Add an organ/system</h1>
+          <nav>
+            <button class="navButton"><a href="/">Home</a></button>
+            <button class="navButton"><a href="/oils">Oils</a></button>
+            <button class="navButton"><a href="/bodies">Body</a></button>
+          </nav>
         </div>
-        </form>
-    </main>
-  </body>
+      </div>
+      <div class="row">
+        <div class="col-md-12 spacer">
+        </div>
+      </div>
+      <div class="editPageContainer">
+        <main>
+          <div class="listingContainer">
+            <form class="editForm" action="/bodies" method="post">
+              Name: <input class="editFields" type="text" name="name" /><br/>
+              Description: <input class="editFields" type="text" name="desc" /><br/>
+      				Icon Image: <input class="editFields" type="text" name="iconImg" /><br/>
+              Oil:
+              <select class="editFields" name="oilId">
+                <option value="null">Choose an essential oil</option>
+                <% for(let i = 0; i < oils.length; i++) { %>
+                <option value="<%=oils[i].id%>"><%=oils[i].name%></option>
+                <% } %>
+              </select>
+              <br/>
+              Oil Effect Description: <input class="editFields" type="text" name="oilEffectText" /><br/>
+              <br/>
+              <input class="editButton" type="submit" value="Add Organ/System" class="addButton"/>
+            </form>
+          </div>
+        </main>
+      </div>
+    </body>
+    <footer>
+      <% include ../../partials/footers.ejs %>
+    </footer>
+  </div>
 </html>

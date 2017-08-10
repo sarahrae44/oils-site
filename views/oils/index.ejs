@@ -7,37 +7,40 @@
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Special+Elite" rel="stylesheet">
     <link rel="stylesheet" href="/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <div class="container-fluid">
     <body class="main">
       <div class="row">
         <div class="col-md-12 mainIndexHeader">
           <h1 class="mainh1">Essential Oils Reference Page</h1>
-      <nav>
-          <%# for bs... %>
-        <button class="navButton"><a href="/">Home</a></button>
-        <button class="navButton"><a href="/bodies">Body</a></button>
-        <button class="navButton"><a href="/oils/new">Add an oil</a></button>
-      </nav>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-12 spacer">
-    </div>
-  </div>
-  <main>
-    <div class="listingContainer">
-        <% for(let i = 0; i < oils.length; i++){ %>
-          <div class="listingItem indexListing mainCategories">
-            <a href="/oils/<%=oils[i]._id%>">
+          <nav>
+            <button class="navButton"><a href="/">Home</a></button>
+            <button class="navButton"><a href="/bodies">Body</a></button>
+            <button class="navButton"><a href="/oils/new">Add an oil</a></button>
+          </nav>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 spacer">
+        </div>
+      </div>
+      <main>
+        <div class="listingContainer">
+          <% for(let i = 0; i < oils.length; i++){ %>
+            <div class="listingItem indexListing mainCategories">
+              <a href="/oils/<%=oils[i]._id%>">
             <div class="listingImgContainer"><img class="listingImg" src="<%=oils[i].iconImg%>"></div></a> <br/>
             <div class="buttonContainer">
-              <button class="listingButton"><a class="whiteText" href="/oils/<%=oils[i]._id%>"><%=oils[i].name%></a></button>
+            <button class="listingButton"><a class="whiteText" href="/oils/<%=oils[i]._id%>"><%=oils[i].name%></a></button>
             </div>
-          </div>
-    		<% } %>
-      </div>
-    </main>
-  </body>
-  <div class="container-fluid">
+            </div>
+          <% } %>
+        </div>
+      </main>
+    </body>
+    <footer>
+      <% include ../../partials/footers.ejs %>
+    </footer>
+  </div>
 </html>

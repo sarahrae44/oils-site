@@ -3,12 +3,8 @@
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
-  }
-
-.bodies {
-  /*background-color: lightblue;*/
-  /*background-image: url('https://www.studyread.com/wp-content/uploads/2016/01/digestive-system.png');*/
-  background-image: url(<%=body.bgImg%>);
+  min-height: 100%;
+  position: relative;
 }
 
 .mainHeader {
@@ -37,8 +33,6 @@
 
 .mainCategories {
   background-color: rgba(255, 255, 255, 0.6);
-  /*display: inline-block;*/
-  /*padding: 100px;*/
   margin-bottom: 40px;
 }
 
@@ -103,6 +97,19 @@ nav {
   flex-wrap: wrap;
   justify-content: center;
   width: 100%;
+  padding-bottom: 20px;
+}
+
+.editPageContainer {
+  min-height: 58vh;
+}
+
+.homePageContainer {
+  min-height: 50vh;
+}
+
+.bodyShowPageContainer {
+  min-height: 40vh;
 }
 
 .listingItem {
@@ -255,4 +262,22 @@ nav {
   padding: 10px;
   font-family: 'Josefin Sans', sans-serif;
   font-size: 1.3em;
+}
+
+.footer {
+  padding: 0 2em;
+  background-color: rgba(69, 86, 56, 0.8);
+  position: fixed;
+  margin-bottom: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.pFooter {
+  color: #aaaa55;
+  text-align: center;
+  padding: 0, 2em;
+  text-align: center;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1.2em;
 }
